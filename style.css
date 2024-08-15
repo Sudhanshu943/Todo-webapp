@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+  height: 100vh;
+  background: linear-gradient(#eb4f4f, #3cc0a3, #0b1f8b);
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+}
+
+.container {
+  margin-top: 5%;
+  width: 100%;
+  height: 400px;
+  max-width: 450px;
+  background-color: transparent;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px 40px #69a7c0dc;
+  padding: 20px;
+  text-align: center;
+}
+
+h1,
+h3 {
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 0.5em;
+}
+
+/* Input Area */
+.inputarea {
+  display: flex;
+  border: 1px solid aqua;
+  border-radius: 10px;
+  margin: 15px 0;
+  background-color: antiquewhite;
+}
+
+#input-item {
+  flex-grow: 1;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  color: #000;
+
+  &::placeholder {
+    color: black;
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#btn {
+  border: none;
+  border-radius: 0 10px 10px 0;
+  background: #3cc0a3;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+  background-color: #2f9c88;
+}
+
+#btn:active {
+  background-color: #267e6c;
+}
+
+/* Todo List Styles */
+.item-lists,
+.completed-lists {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 250px;
+  overflow-y: auto;
+  border-top: 1px solid #ffffff3b;
+  padding-top: 10px;
+  text-align: start;
+}
+
+/* List Item Styles */
+.item-lists li,
+.completed-lists li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+  background-color: #616192;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: #fff;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
+}
+
+.item-lists li:hover,
+.completed-lists li:hover {
+  background-color: #2f9c88;
+  backdrop-filter: blur(30px);
+}
+
+.todo-checkbox {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.todo-text {
+  flex-grow: 1;
+}
+
+.item-lists li .span,
+.completed-lists li .span {
+  display: inline-block;
+  background: #707070;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 25px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.item-lists li .span:hover,
+.completed-lists li .span:hover {
+  background-color: #ff4b4b;
+}
+
+/* Checked State Styles */
+.completed-lists li {
+  text-decoration: line-through;
+  background-color: #5a5a8b;
+}
+
+.completed-lists li.checked {
+  background-color: #575794;
+}
